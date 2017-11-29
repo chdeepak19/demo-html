@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo</title>
+</head>
+<body>
+ <div class="container-fluid">
+ 	<h4 style="text-align: center">Objects</h4>
+ 	
+ 	<span id="firstname"></span><br>
+ 	<span id="secondname"></span><br>
+ 	<span id="age"></span><br>
+ 	<span id="gender"></span><br>
+ 	<span id="city"></span><br>
+ 	<span id="number12"></span><br>
+ 	<span id="village"></span><br>
+ 	<span id="qualification"><span><br>
+ 	
+ </div>
+
+<script type="text/javascript">
+	var deepak = {
+		firstname:"deepak",
+		secondname:"varma",
+		age:"24",
+		gender:"male",
+		city:"hyderabad",
+		qualification:"mca",
+		state:"Andhrapradesh",
+		village:"Bikkavolu"
+	};
+	 console.log(deepak,"deepak")
+	 console.log(deepak.number,"deepak.number")
+	 
+	document.getElementById("firstname").innerHTML = deepak.firstname;
+	document.getElementById("secondname").innerHTML = deepak.secondname;
+	document.getElementById("age").innerHTML = deepak.age;
+	document.getElementById("gender").innerHTML = deepak.gender;
+	document.getElementById("city").innerHTML = deepak.city;
+	document.getElementById("village").innerHTML = deepak.village;
+	document.getElementById("number12").innerHTML = deepak.state;
+	document.getElementById("qualification").innerHTML = deepak.qualification;
+
+</script>
+
+</body>
+</html>

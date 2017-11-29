@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo</title>
+</head>
+<body>
+<div class="container-fluid">
+	<h3 style="text-align: center">Addition</h3>
+<form onsubmit="add(event)">
+	<input type="number" name="" id="avalue" placeholder="Enter a value"><br><br>
+	<input type="number" name="" id="bvalue" placeholder="Enter b value"><br><br>
+	<input type="number" name="" id="cvalue" placeholder="Enter c value"><br><br>
+	<input type="number" name="" id="dvalue" placeholder="Enter d value"><br><br>
+	<button type="submit">Submit</button><br>
+</form>
+<div>
+	Total value:<span id="values"></span>
+
+</div>
+
+<form onsubmit="getDetails(event)">
+	<input type="text" name="name" id="firstname" placeholder="Enter firstname"><br><br>
+	<input type="text" name="name" id="secondname" placeholder="Enter secondname"><br><br>
+	<input type="text" name="name" id="gender" placeholder="Enter your gender"><br><br>
+	<input type="number" name="name" id="age" placeholder="Enter your age"><br><br>
+	<input type="text" name="name" id="city" placeholder="Enter your city"><br><br>
+	<button type="submit">Submit</button><br>
+</form>
+<div>
+	Details:<span id="details"></span>
+
+</div>
+
+<div>
+ <input type="text" name="name" id="first" placeholder="Enter your firstname"><br><br>
+ <input type="text" name="name" id="second" placeholder="Enter your lastname"><br><br>
+ <button type="button" onclick="getName()">Fullname</button><br><br>
+ Full Name:<span id="names"></span>
+</div>	
+</div>
+<script type="text/javascript">
+	function add(event){
+		event.preventDefault(); 
+		var a = parseInt(document.getElementById("avalue").value);
+		console.log(a,"function a")
+		var b = parseInt(document.getElementById("bvalue").value);
+		var c = parseInt(document.getElementById("cvalue").value);
+		var d = parseInt(document.getElementById("dvalue").value);
+        var total = a + b + c + d;
+        document.getElementById("values").innerHTML = total;
+	}
+
+	function getName(){
+		// console.log(a,"getName")
+		var e = document.getElementById("first").value;
+		var f = document.getElementById("second").value;
+		var name = e + f;
+		console.log(name,"name")
+		document.getElementById("names").innerHTML = name;
+	}
+
+
+	function getDetails(event){
+          event.preventDefault();		
+          var g = document.getElementById("firstname").value;
+          var h = document.getElementById("secondname").value;
+          var i = document.getElementById("gender").value;
+          var j = parseInt(document.getElementById("age").value);
+          var k = document.getElementById("city").value;
+      var fulldetails = g + h + i + j + k;
+      document.getElementById("details").innerHTML = fulldetails;
+	}
+</script>
+</body>
+</html>
